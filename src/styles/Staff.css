@@ -1,0 +1,76 @@
+.staff-container {
+    text-align: center;
+    padding: 80px 0; /* 🔥 เพิ่มระยะห่างด้านบนให้สมดุล */
+    width: 100vw;
+    max-width: 1400px; /* 🔥 ปรับให้กว้างเต็มพื้นที่ */
+    margin: 0 auto;
+  }
+  
+  .staff-container h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px; /* 🔥 เพิ่มระยะห่างจากหัวข้อ */
+  }
+  
+  .staff-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* ✅ จัดให้อยู่ 3 คอลัมน์ */
+    gap: 30px; /* 🔥 ปรับช่องว่างให้สมดุล */
+    width: 100%;
+    max-width: 1200px; /* ✅ ปรับให้พอดีจอ */
+    padding: 20px;
+    margin: 0 auto; /* ✅ ทำให้ตรงกลาง */
+    justify-content: center; 
+    align-items: center; /* ✅ จัดให้อยู่ตรงกลางแนวตั้ง */
+  }
+  
+  .staff-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    width: 100%; /* ✅ ปรับให้กว้างตาม grid */
+    max-width: 350px; /* ✅ กำหนดขนาดสูงสุด */
+    margin: auto; /* ✅ ทำให้การ์ดอยู่กึ่งกลาง */
+  }
+  
+  .staff-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .staff-image {
+    width: 120px; /* 🔥 ปรับขนาดรูปให้สมดุล */
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+  
+  .staff-card h3 {
+    margin: 15px 0 10px;
+    font-size: 1.5rem;
+    color: #0072ff;
+  }
+  
+  .staff-card p {
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  /* 🔥 Responsive: คงไว้ที่ 3 คอลัมน์ แต่การ์ดเล็กลง */
+  @media (max-width: 1024px) {
+    .staff-grid {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 95vw;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .staff-grid {
+      grid-template-columns: repeat(1, 1fr); /* ✅ มือถือแสดงผล 1 คอลัมน์ */
+      max-width: 90vw;
+    }
+  }
+  

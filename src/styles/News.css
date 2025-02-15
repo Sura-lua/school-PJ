@@ -1,0 +1,76 @@
+/* styles/News.css */
+
+.news-container {
+    max-width: 100vw;  /* ✅ ปรับความกว้างให้เต็มหน้าจอ */
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.news-grid {
+    display: flex;  /* ✅ ใช้ Flexbox เพื่อให้ข่าวเรียงเต็มจอ */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.news-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    width: 80%;  /* ✅ ขยายความกว้างของการ์ดข่าว */
+    max-width: 900px; /* ✅ จำกัดขนาดสูงสุด */
+    margin-bottom: 20px;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+}
+
+.news-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.news-content {
+    padding: 15px;
+    text-align: left;
+}
+
+.news-date {
+    font-size: 14px;
+    color: gray;
+}
+
+.read-more {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.read-more:hover {
+    background: #0056b3;
+}
+
+  /* Responsive: 2 คอลัมน์สำหรับแท็บเล็ต */
+  @media (max-width: 1024px) {
+    .activities-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* Responsive: 1 คอลัมน์สำหรับมือถือ */
+  @media (max-width: 768px) {
+    .activities-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  
