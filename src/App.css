@@ -1,42 +1,84 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* รีเซ็ตค่าเริ่มต้น */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: linear-gradient(to right, #00a2ff, #00ff88);
+  border-bottom: 4px solid #4a148c;
+}
+
+/* โลโก้ */
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  width: 70px;
+  height: 70px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* เมนู */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  background: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  box-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+  font-size: 16px;
+  color: black;
+  transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+  background: yellow;
+}
+
+/* ปุ่มเข้าสู่ระบบ */
+.login-btn {
+  background: limegreen !important;
+  color: white !important;
+}
+
+/* สไลด์โชว์ */
+.slider {
+  width: 100%;
+  height: 350px;
+  background: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+}
+/* ปรับให้ Navbar เป็น Mobile Friendly */
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  nav ul {
+      flex-direction: column;
+      gap: 10px;
+      padding: 10px 0;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
