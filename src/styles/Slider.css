@@ -1,0 +1,55 @@
+.slider {
+    position: relative;
+    width: 100vw;  /* ปรับให้เต็มความกว้างของ viewport */
+    height: 100vh; /* ปรับให้สูงเท่ากับ viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    overflow: hidden;
+  }
+  
+  .slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ปรับให้ภาพพอดีกับจอ */
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5); /* เปลี่ยนปุ่มให้ดูโปร่งแสง */
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.3s;
+  }
+  
+  .prev {
+    left: 20px;
+  }
+  
+  .next {
+    right: 20px;
+  }
+  
+  .prev:hover, .next:hover {
+    background: rgba(255, 255, 255, 0.8);
+    color: black;
+  }
+  
+  @media (max-width: 768px) {
+    .slider {
+      height: 60vh; /* ปรับให้เล็กลงในมือถือ */
+    }
+    .prev, .next {
+      padding: 10px;
+      font-size: 18px;
+    }
+  }
+  

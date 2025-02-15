@@ -69,16 +69,4 @@ nav ul li a:hover {
   color: white;
   font-weight: bold;
 }
-/* ปรับให้ Navbar เป็น Mobile Friendly */
-@media (max-width: 768px) {
-  .navbar {
-      flex-direction: column;
-      align-items: center;
-  }
 
-  nav ul {
-      flex-direction: column;
-      gap: 10px;
-      padding: 10px 0;
-  }
-}
